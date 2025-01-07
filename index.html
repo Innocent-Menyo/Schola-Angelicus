@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schola Angelica - Where Youth Thrive Through Music</title>
+    <title>Schola Angelica</title>
     <style>
         /* Basic Reset */
         body, html {
@@ -149,7 +149,7 @@
             padding: 40px;
             text-align: center;
             background-color: #f4f4f4;
-            display: none;
+            display: block; /* Make the form visible by default */
         }
 
         .support-form input, .support-form textarea {
@@ -222,12 +222,12 @@
     </div>
 
     <!-- Support Us Button -->
-    <a href="#support" class="support-us-btn" onclick="showSupportForm(event)">Support Us</a>
+    <a href="#support" class="support-us-btn">Support Us</a>
 
     <!-- Support Us Form Section -->
     <div class="support-form" id="support">
         <h2>Support Us</h2>
-        <form>
+        <form action="mailto:scholaangelica@gmail.com" method="post" enctype="text/plain">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
             
@@ -243,15 +243,6 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
-    <!-- JavaScript for toggling form visibility -->
-    <script>
-        function showSupportForm(event) {
-            event.preventDefault();
-            const supportForm = document.getElementById('support');
-            supportForm.style.display = supportForm.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
 
 </body>
 </html>
