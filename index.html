@@ -1,186 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Organization Landing Page</title>
-    <style>
-        /* Basic Reset */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-        /* Fullscreen Image Background */
-        .landing-page {
-            background-image: url('https://images.unsplash.com/photo-1673372316742-57c84d7e63c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGlwZSUyMG9yZ2FufGVufDB8fDB8fHww');
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
 
-        /* Adding opacity to darken the image */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
 
-        /* Heading Styles */
-        .headline {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3em;
-            animation: fadeInUp 2s ease-out;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1.2em;
+}
 
-        /* Animation for text */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+nav ul li a:hover {
+    background-color: #444;
+}
 
-        /* Moving text effect */
-        .moving-text {
-            font-size: 1.5em;
-            color: white;
-            margin: 0 0 20px;
-            text-align: center;
-            animation: moveText 10s linear infinite;
-        }
+/* Landing Page Section */
+.landing-page {
+    background-image: url('https://images.unsplash.com/photo-1673372316742-57c84d7e63c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGlwZSUyMG9yZ2FufGVufDB8fDB8fHww');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
-        @keyframes moveText {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-        /* Video Section */
-        .video-container {
-            padding: 40px;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+}
 
-        iframe {
-            width: 80%;
-            height: 500px;
-            border: none;
-        }
+/* About Us Section */
+.about-us {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
 
-        .youtube-links {
-            margin-top: 30px;
-        }
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
 
-        .youtube-links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-        }
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+}
 
-        .youtube-links a:hover {
-            background-color: #444;
-        }
+/* Contact Us Section */
+.contact-us {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
 
-        /* About Us Section */
-        .about-us {
-            background-color: #fff;
-            padding: 40px;
-            text-align: center;
-        }
+.contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
 
-        .about-us h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+.contact-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
 
-        .about-us p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin: 20px auto;
-            max-width: 800px;
-        }
+/* Our Impact Section */
+.impact {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
 
-        /* Contact Us Section */
-        .contact-us {
-            background-color: #f4f4f4;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .contact-us h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .contact-us p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Landing Page Section -->
-    <div class="landing-page">
-        <div class="overlay"></div>
-        <div class="headline">Welcome to Schola Angelica</div>
-    </div>
-
-    <!-- Moving Text Section -->
-    <div class="moving-text">
-        Empowering underprivileged youth through music education.
-    </div>
-
-    <!-- YouTube Video Section -->
-    <div class="video-container">
-        <h2>Our Latest Performance</h2>
-        <iframe src="https://www.youtube.com/embed/ASut1ms1X-s" allowfullscreen></iframe>
-
-        <h2>Another Performance</h2>
-        <iframe src="https://www.youtube.com/embed/ASut1ms1X-s" allowfullscreen></iframe>
-
-        <div class="youtube-links">
-            <a href="https://youtu.be/ASut1ms1X-s" target="_blank">Watch on YouTube</a>
-            <a href="https://www.youtube.com/watch?v=XXXXXXXXX" target="_blank">Another Video Link</a> <!-- Replace with actual video link -->
-        </div>
-    </div>
-
-    <!-- About Us Section -->
-    <div class="about-us">
-        <h2>About Us</h2>
-        <p>At Schola Angelica, we are committed to changing lives through music. Our charity provides underprivileged youth with the opportunity to learn and master a variety of musical instruments, including piano, cello, violin, guitar, and organ.</p>
-        <p>Our mission is to offer quality music education to children and young adults who face financial barriers to formal education. By providing free training in these instruments, we open doors for youth to explore their musical talents and develop skills that will serve them for life.</p>
-    </div>
-
-    <!-- Contact Us Section -->
-    <div class="contact-us">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:scholaangelica@gmail.com">scholaangelica@gmail.com</a></p>
-        <p>Phone: <a href="tel:+256700903657">+256 700 903 657</a></p>
-    </div>
-
-</body>
-</html>
+.impact iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+}
