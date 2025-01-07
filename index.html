@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schola Angelica</title>
+    <title>Schola Angelica - Where Youth Thrive Through Music</title>
     <style>
         /* Basic Reset */
         body, html {
@@ -125,6 +125,54 @@
             top: 0;
         }
 
+        /* Support Us Button */
+        .support-us-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .support-us-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Support Us Form */
+        .support-form {
+            padding: 40px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .support-form input, .support-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .support-form button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .support-form button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -136,13 +184,14 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#impact">Our Impact</a></li>
             <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#support">Support Us</a></li>
         </ul>
     </nav>
 
     <!-- Landing Page Section -->
     <div class="landing-page" id="home">
         <div class="overlay"></div>
-        <div class="headline">Schola Angelica - Where Youth Thrive Through Music</div>
+        <div class="headline">Welcome to Schola Angelica</div>
     </div>
 
     <!-- Moving Text Section -->
@@ -169,6 +218,26 @@
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:scholaangelica@gmail.com">scholaangelica@gmail.com</a></p>
         <p>Phone: <a href="tel:+256700903657">+256 700 903 657</a></p>
+    </div>
+
+    <!-- Support Us Button -->
+    <a href="#support" class="support-us-btn">Support Us</a>
+
+    <!-- Support Us Form Section -->
+    <div class="support-form" id="support">
+        <h2>Support Us</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="support">Support Offered:</label><br>
+            <textarea id="support" name="support" rows="4" required></textarea><br><br>
+            
+            <label for="contact">Contact Details:</label><br>
+            <input type="text" id="contact" name="contact" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
 </body>
