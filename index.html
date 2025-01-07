@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schola Angelica - Where Youth Thrive Through Music</title>
+    <title>Schola Angelica</title>
     <style>
         /* Basic Reset */
         body, html {
@@ -149,6 +149,7 @@
             padding: 40px;
             text-align: center;
             background-color: #f4f4f4;
+            display: none;
         }
 
         .support-form input, .support-form textarea {
@@ -184,14 +185,14 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#impact">Our Impact</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#support">Support Us</a></li>
+            <li><a href="#support" class="support-us-btn">Support Us</a></li>
         </ul>
     </nav>
 
     <!-- Landing Page Section -->
     <div class="landing-page" id="home">
         <div class="overlay"></div>
-        <div class="headline">Welcome to Schola Angelica</div>
+        <div class="headline">Schola Angelica - Where Youth Thrive Through Music</div>
     </div>
 
     <!-- Moving Text Section -->
@@ -221,7 +222,7 @@
     </div>
 
     <!-- Support Us Button -->
-    <a href="#support" class="support-us-btn">Support Us</a>
+    <a href="#support" class="support-us-btn" onclick="showSupportForm(event)">Support Us</a>
 
     <!-- Support Us Form Section -->
     <div class="support-form" id="support">
@@ -239,6 +240,15 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <!-- JavaScript for toggling form visibility -->
+    <script>
+        function showSupportForm(event) {
+            event.preventDefault();
+            const supportForm = document.getElementById('support');
+            supportForm.style.display = supportForm.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 
 </body>
 </html>
